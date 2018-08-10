@@ -5,8 +5,8 @@ var router = express.Router();
 var apiController = require('../controllers/api/specials');
 var specialsController = require('../controllers/specials');
 
-router.get('/', apiController.getAllSpecials);
-router.get('/:id', apiController.getASpecial);
+router.get('/specials', apiController.getAllSpecials);
+router.get('/specials/:id', apiController.getASpecial);
 
 // Internal API CALLS
 router.delete('/specials/:id', specialsController.destroy);
